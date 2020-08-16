@@ -11,17 +11,17 @@ Além de se conectar com uma API externa para validar se a casa que o usuário i
 
 ## 👨‍💻 Tecnologias utilizadas:
 
-:heavy_check_mark: Java 8
-:heavy_check_mark: Maven
-:heavy_check_mark: Spring Boot
-:heavy_check_mark: Spring JPA
-:heavy_check_mark: Spring boot dev tools
-:heavy_check_mark: Spring boot starter cache
-:heavy_check_mark: Swagger
-:heavy_check_mark: JUnit 4
-:heavy_check_mark: MySql (5.5.0)
-:heavy_check_mark: H2 database
-:heavy_check_mark: Redis
+:heavy_check_mark: Java 8 <br/>
+:heavy_check_mark: Maven <br/>
+:heavy_check_mark: Spring Boot <br/>
+:heavy_check_mark: Spring JPA <br/>
+:heavy_check_mark: Spring boot dev tools<br/>
+:heavy_check_mark: Spring boot starter cache<br/>
+:heavy_check_mark: Swagger<br/>
+:heavy_check_mark: JUnit 4<br/>
+:heavy_check_mark: MySql (5.5.0)<br/>
+:heavy_check_mark: H2 database<br/>
+:heavy_check_mark: Redis<br/>
 
 ## 🚀 Como rodar o projeto
 
@@ -45,8 +45,8 @@ Pronto!!! Com os dois DB em execução você precisará agora do **Maven** insta
 mvn clean install
 ```
 
-Com insto ele irá gerar o nosso arquivo **.jar** dentro da pasta **target**. Com o java instalado em sua máquina execute-o.
-Finalmente nossa aplicação esta rodando(ou deveria...), para testarmos se realmente está rodando vamos entrar na documentação interativa da API gerado pelo **Swagger** clicando [aki](http://localhost:8080/swagger-ui.html#/).
+Com isso ele irá gerar o nosso arquivo **.jar** dentro da pasta **target**. Com o java instalado em sua máquina execute-o.
+Finalmente nossa aplicação está rodando,para testarmos se realmente está rodando vamos entrar na documentação interativa da API gerado pelo **Swagger** clicando [aqui](http://localhost:8080/swagger-ui.html#/).
 
 Se deu tudo certo, você deverá estar testando minha aplicação agora em uma tela como esta. :tada: :tada: :tada:
 
