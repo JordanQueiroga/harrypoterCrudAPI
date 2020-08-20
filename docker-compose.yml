@@ -1,0 +1,45 @@
+version: '3.7'
+services:
+ database:
+    image: mysql:5.5.40
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_DATABASE: "harry_porter"
+    restart: always
+    ports:
+      - "3306:3306"
+    networks:
+      - spring-boot-harry-potter
+      
+ redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - spring-boot-harry-potter
+      
+ app:
+    build:
+        context: ./ 
+        dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/harry_porter?autoReconnect=true&useSSL=false
+      SPRING_REDIS_HOST: redis
+    links:
+       - redis:redis
+       - database:database
+    ports:
+      - "8080:8080"
+    networks:
+      - spring-boot-harry-potter
+    depends_on:
+      - database
+      - redis
+      
+networks:
+    spring-boot-harry-potter:
+        driver: bridge
+
+# Bridge: O driver de bridge cria uma rede privada interna ao host para que os contêineres dessa rede possam se comunicar. 
+# O acesso externo é concedido expondo portas a contêineres. 
+# O Docker protege a rede gerenciando regras que bloqueiam a conectividade entre diferentes redes Docker.
